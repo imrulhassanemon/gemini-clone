@@ -1,9 +1,65 @@
-#root{
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+#root {
     min-height: 100vh;
+    display: flex;
 }
-.sidebar{
-    min-height: 100vh;
+.sidebar {
+  min-height: 100vh;
 }
-.sidebar img{
-    width: 20px;
+.sidebar img {
+  width: 20px;
+}
+* {
+  font-family: Outfit;
+  box-sizing: border-box;
+}
+.main-container{
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.min img{
+    position: absolute;
+    width: 35px;
+    bottom: 10px;
+    right: 10px;
+}
+.min p{
+    color: #585858;
+    font-size: 17px;
+}
+.min .card:hover{
+    background-color: #d4d6c9;
+}
+
+.main-bottom{
+    position: absolute;
+    bottom: 0;
+    border: 1px solid red;
+    /* width: 100%; */
+    /* max-width: 900px; */
+    /* padding: 0px 20px ; */
+    /* margin: auto; */
+}
+
+.serch-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px ;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px ;
+}
+.serch-box img{
+    width: 24px;
+    cursor: pointer;
+
+}
+.serch-box input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
 }
