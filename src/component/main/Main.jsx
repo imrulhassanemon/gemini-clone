@@ -59,11 +59,25 @@ const Main = () => {
           </>
         ) : (
           <div className="max-w-[1300px] mx-auto h-[380px]">
-            <div>
-              <img className="w-12 rounded-full" src={assets.user_icon} alt="" />
+            <div className="flex items-center gap-3">
+              <img
+                className="w-12 rounded-full"
+                src={assets.user_icon}
+                alt=""
+              />
+              <p className="text-[] font-semibold">{recentPrompt}</p>
             </div>
-            <div>
-              {resultData}
+            <div className="heights gap-3 flex items-start">
+              <img className="w-14 " src={assets.gemini_icon} alt="" />
+              {
+                loading?<> <div className="flex w-52 flex-col gap-4 w-full">
+                <div className="skeleton h-32 w-full"></div>
+                <div className="skeleton h-4 w-full"></div>
+                <div className="skeleton h-4 w-full"></div>
+                <div className="skeleton h-4 w-full"></div>
+              </div></>:<p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+              }
+              
             </div>
           </div>
         )}
@@ -80,7 +94,7 @@ const Main = () => {
                 onChange={(e) => setInput(e.target.value)}
                 value={input}
                 type="text "
-                placeholder="Enter a prompt here"
+                placeholder="Ask Gemini"
               />
               <div className="images flex  ">
                 <img src={assets.gallery_icon} alt="" />

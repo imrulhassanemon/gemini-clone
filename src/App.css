@@ -60,3 +60,6 @@
     outline: none;
     background: transparent;
 }
+.heights{
+    max-height: 70vh;
+}
