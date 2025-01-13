@@ -4,12 +4,13 @@ import run from "../config/gemini";
 
 export const Context = createContext()
 
-const ContextProvider = (prompt) => {
+const ContextProvider = (props) => {
 
     const onSent = async (prompt) =>{
         await run(prompt)
     }
-    // onSent('what is react js')
+    onSent('hi gemini')
+    onSent('please give me a task for today')
 
     const contextValue ={
 
