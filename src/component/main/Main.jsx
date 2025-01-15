@@ -70,7 +70,7 @@ const Main = () => {
             <div className="heights gap-3 flex items-start">
               <img className="w-14 " src={assets.gemini_icon} alt="" />
               {
-                loading?<> <div className="flex w-52 flex-col gap-4 w-full">
+                loading?<> <div className="flex  flex-col gap-4 w-full">
                 <div className="skeleton h-32 w-full"></div>
                 <div className="skeleton h-4 w-full"></div>
                 <div className="skeleton h-4 w-full"></div>
